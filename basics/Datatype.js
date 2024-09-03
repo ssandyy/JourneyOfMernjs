@@ -15,4 +15,7 @@ console.table([x, y, name2])
 │ 2       │ 'Sandeep' │
 └─────────┴───────────┘
 */
-
+//OR 
+console.log(x) //10
+console.log(y) //5
+console.log(name2) // 'Sandeep'
