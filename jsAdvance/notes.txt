@@ -1,0 +1,9 @@
+document.querySelectorAll('.mw-heading')
+
+const h2Head = document.querySelectorAll('.mw-heading')
+
+h2Head.forEach(function(h){
+    h.style.color = 'red'
+})
+
+
