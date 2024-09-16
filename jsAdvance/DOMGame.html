@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM GamePlay1</title>
+</head>
+<body>
+    <ul class="listing">
+        <li>Objective-c</li>
+    </ul>
+
+    <ul class="greeting">
+        <li>Namaste</li>
+    </ul>
+</body>
+<script>
+
+    //----------------------------------    Add   ------------------------
+    function addlist(langName){
+        const li = document.createElement('li')
+        li.innerHTML = `${langName}`
+        document.querySelector('.listing').appendChild(li)
+    }
+    addlist("C")
+    addlist("c++")
+    addlist("java")
+
+    //OR (Optimized way )
+    function addOptimized(message){
+        const li = document.createElement('li')
+        li.appendChild(document.createTextNode(message))
+        document.querySelector('.greeting').appendChild(li)
+    }
+    addOptimized("good morning..!")
+    addOptimized("good Noon..!")
+
+    //----------------------------------    update/Edit   ------------------------
+//     function updatelist(elementNumber){
+//         const element = document.querySelector("li:nth-child(elementNumber)")
+//         const newLi = document.createElement('li')
+//         newLi.textContent = "Java"
+//         element.replaceWith(newLi)
+//     }
+// updatelist(2)
+
+const element = document.querySelector("li:nth-child(2)")
+const newLi = document.createElement('li')
+newLi.textContent = "Hello"
+element.replaceWith(newLi)
+
+// OR ----> (using innerHTML/OuterHTML)
+const firstElement = document.querySelector("li:first-child")
+const element2 = document.querySelector("li:nth-child(3)")
+firstElement.outerHTML = '<li>Hello</li>'
+element2.outerHTML = '<li>Hey</li>'
+
+// -----------------------------------  Remove / Delete --------------------------------
+const selectElement = document.querySelector("li:nth-child(2)")
+selectElement.remove()
+
+</script>
+</html>
