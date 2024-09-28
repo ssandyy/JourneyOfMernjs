@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Chai aur Javascript</h1>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+</body>
+<script>
+    let intervals;
+ 
+    const sayDate = (str) => {
+        console.log(str, new Date().toLocaleTimeString());
+        const luckyNum = (parseInt(Math.random() * 10) + 1)
+    }
+   
+
+
+    document.querySelector('#start').addEventListener('click', () => {
+        if(!intervals){
+            intervals = setInterval(sayDate, 1000, `Hello Sandeep ${luckyNum}`)
+        }else{
+            alert('timmer is already running..!')
+        }
+    })
+    document.querySelector('#stop').addEventListener('click', () => {
+        if(intervals){
+            clearInterval(intervals)
+            intervals = null
+        }else{
+            alert('Currently no timmer is running..!')
+        }
+    })
+        
+</script>
+</html>

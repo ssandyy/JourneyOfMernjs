@@ -87,25 +87,3 @@ function endGame() {
         resultArea.removeChild(restartBtn); // Remove the restart button
     });
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
