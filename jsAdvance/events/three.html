@@ -12,21 +12,21 @@
 </body>
 <script>
     let intervals;
- 
+
     const sayDate = (str) => {
         console.log(str, new Date().toLocaleTimeString());
-        const luckyNum = (parseInt(Math.random() * 10) + 1)
+        // var luckyNum = (parseInt(Math.random() * 10) + 1)
     }
-   
-
 
     document.querySelector('#start').addEventListener('click', () => {
         if(!intervals){
-            intervals = setInterval(sayDate, 1000, `Hello Sandeep ${luckyNum}`)
+            // intervals = setInterval(sayDate, 1000, `Hello Sandeep ${luckyNum}`)
+            intervals = setInterval(sayDate, 1000, `Hello Sandeep`)
         }else{
             alert('timmer is already running..!')
         }
     })
+
     document.querySelector('#stop').addEventListener('click', () => {
         if(intervals){
             clearInterval(intervals)
