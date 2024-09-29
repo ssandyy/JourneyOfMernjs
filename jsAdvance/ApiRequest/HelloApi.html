@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<!-- Using XML -->
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<!-- 
+Value	State	    Description
+1	    OPENED	    open() has been called.
+2	    HEADERS_    RECEIVED	send() has been called, and headers and status are available.
+3	    LOADING	    Downloading; responseText holds partial data.
+4	    DONE	    The operation is complete.
+-->
+
+<p class="xml">Hi</p>
+
+
+</body>
+<script>
+    
+    const requestURL = 'https://api.github.com/users/ssandyy'
+    const xhr = new XMLHttpRequest();
+    xhr.open('GET', requestURL)
+    
+    xhr.onreadystatechange = () => {
+        console.log(xhr.readyState);
+
+        if(xhr.readyState === 4){
+            //console.log(this.resposeText); // in arrow function 'this' keyword does not work.
+            // console.log(xhr.responseText);
+            const userData  = JSON.parse(xhr.responseText);// typecaste to Json because xhr.responseTxt will bring string data
+            console.log(userData.followers);
+
+            
+        }
+    }
+    xhr.send();
+    
+
+</script>
+
+</html>
