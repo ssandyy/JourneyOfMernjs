@@ -14,7 +14,7 @@ const MovieDatabase = [
     Country: "USA, UK",
     Awards: "Won 3 Oscars. Another 80 wins & 121 nominations.",
     Poster:
-      "http://ia.media-imdb.com/images/M/MV5BMTYwOTEwNjAzMl5BMl5BanBnXkFtZTcwODc5MTUwMw@@._V1_SX300.jpg",
+      "https://shorturl.at/psGKX",
     Metascore: "83",
     imdbRating: "7.9",
     imdbVotes: "890,617",
@@ -46,7 +46,7 @@ const MovieDatabase = [
     Country: "USA",
     Awards: "9 wins & 21 nominations.",
     Poster:
-      "http://ia.media-imdb.com/images/M/MV5BMTU4NzMyNDk1OV5BMl5BanBnXkFtZTcwOTEwMzU1MQ@@._V1_SX300.jpg",
+      "https://shorturl.at/gwHrh",
     Metascore: "65",
     imdbRating: "7.2",
     imdbVotes: "533,874",
@@ -76,7 +76,7 @@ const MovieDatabase = [
     Country: "USA",
     Awards: "16 wins & 42 nominations.",
     Poster:
-      "http://ia.media-imdb.com/images/M/MV5BMjAzNTkzNjcxNl5BMl5BanBnXkFtZTYwNDA4NjE3._V1_SX300.jpg",
+      "https://shorturl.at/rCn30",
     Metascore: "52",
     imdbRating: "7.7",
     imdbVotes: "611,046",
