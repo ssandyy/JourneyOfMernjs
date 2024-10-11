@@ -1,6 +1,6 @@
 import React from 'react'
 
-function Card({item}) {
+function Card({item, btnName = "Visit me"}) {
     return (
         <div className="max-w-xs p-6 rounded-md shadow-md bg-black m-5">
           <img
@@ -17,7 +17,8 @@ function Card({item}) {
           <p className="text-gray-300">
             {item.plot}
           </p>
-          <button className='bg-grey' >Click </button>
+          <button className='bg-grey' >{btnName} </button>
+          {/* <button className='bg-grey' >{btnName || "Visit Me"} </button> */}
         </div>
     )
 }
