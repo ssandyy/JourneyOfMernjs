@@ -1,6 +1,6 @@
-const Button =(displayData) => {
-    return(
-        <button onClick={displayData}>Submit</button>
-    );
-}
+const Button = ({ type }) => {
+  console.log("=========================");
+
+  return <button type={type}>Submit</button>;
+};
 export default Button;
