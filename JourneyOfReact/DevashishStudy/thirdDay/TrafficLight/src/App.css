@@ -1,0 +1,42 @@
+* {
+  text-align: center;
+  justify-content: center;
+  background: rgb(199, 137, 229);
+}
+.btn {
+  border: 2px solid red;
+  padding: 2px;
+  margin: 5px;
+}
+
+#displaymeter {
+  border: 4px solid blue;
+  display: fit-content
+}
+
+.lightIndicator{
+  display: flex;
+  text-align: center;
+
+}
+
+.red-light {
+  border: 2px solid black;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+}
+
+.yellow-light {
+  border: 2px solid black;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+}
+
+.green-light {
+  border: 2px solid black;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+}
