@@ -1,0 +1,30 @@
+.navbar-container {
+    background-color: #56688d; 
+    padding: 10px 20px; 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    width: 100%;
+    position: fixed;
+    top: 0; 
+    left: 0; 
+}
+
+.navbar-content {
+    width: 70%;
+    display: contents; 
+    align-items: center; 
+}
+
+.navButton {
+    width: 30%;
+    list-style: none;
+    padding: 4px 4px;
+    display: flex;
+    
+}
+
+li a {
+    padding-left: 15px;
+    color: azure;
+}
