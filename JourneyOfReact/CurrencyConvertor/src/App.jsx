@@ -1,51 +1,56 @@
 import { useState } from "react";
 import useCurrencyInfo from "./hooks/useCurrencyInfo";
+import InputBox from "./components/InputBox";
+import "./App.css"
 
 const App = () => {
-    const BackgroundImage = "https://i.sstatic.net/jGlzr.png"
+    // const BackgroundImage = "https://img.freepik.com/premium-vector/currency-exchange-conversion-icon-concept_313674-39098.jpg?w=740";
     const [amount, setAmount] = useState(0);
-    const [from, setFrom] = useState("inr");
-    const [to, setTo] = useState("usd");
+    const [from, setFrom] = useState("usd");
+    const [to, setTo] = useState("inr");
     const [convertedAmount, setConvertedAmount] = useState(0);
 
     const currencyInfo = useCurrencyInfo(from);
 
-    const options = Object.keys(currencyInfo);
+    // Safeguard against empty currencyInfo
+    const options = currencyInfo && Object.keys(currencyInfo).length ? Object.keys(currencyInfo) : [];
 
     const swap = () => {
         setFrom(to);
         setTo(from);
         setConvertedAmount(amount);
         setAmount(convertedAmount);
-    }
+    };
 
     const convert = () => {
-        setConvertedAmount(amount * currencyInfo[to])
-    }
-
+        if (currencyInfo[to]) {
+            setConvertedAmount(amount * currencyInfo[to]);
+        }
+    };
 
     return (
         <div
-            className="w-full h-screen flex flex-wrap justify-center items-center bg-cover bg-no-repeat"
-            style={{
-                backgroundImage: `url('${BackgroundImage}')`,
-            }}
+            // className="w-full h-screen flex flex-wrap justify-center items-center bg-cover bg-no-repeat"
+            // style={{
+            //     backgroundImage: `url('${BackgroundImage}')`,
+            // }}
         >
             <div className="w-full">
                 <div className="w-full max-w-md mx-auto border border-gray-60 rounded-lg p-5 backdrop-blur-sm bg-white/30">
                     <form
                         onSubmit={(e) => {
                             e.preventDefault();
-                           convert();
+                            convert();
                         }}
                     >
                         <div className="w-full mb-1">
                             <InputBox
                                 label="From"
                                 amount={amount}
-                                currencyOptions = {options}
-                                onCurrencyChange = {(currency) => setAmount(amount)}
-                                selectCurrency = {from}
+                                currencyOptions={options}
+                                onCurrencyChange={(currency) => setFrom(currency)}
+                                onAmountChange={(amount) => setAmount(amount)}
+                                selectCurrency={from}
                             />
                         </div>
                         <div className="relative w-full h-0.5">
@@ -61,11 +66,10 @@ const App = () => {
                             <InputBox
                                 label="To"
                                 amount={convertedAmount}
-                                currencyOptions = {options}
-                                onCurrencyChange = {(currency) => setTo(currency)}
-                                selectCurrency = {from}
+                                currencyOptions={options}
+                                onCurrencyChange={(currency) => setTo(currency)}
+                                selectCurrency={to}
                                 amountDisable
-                                
                             />
                         </div>
                         <button type="submit" className="w-full bg-blue-600 text-white px-4 py-3 rounded-lg">
@@ -76,5 +80,6 @@ const App = () => {
             </div>
         </div>
     );
-}
+};
+
 export default App;
