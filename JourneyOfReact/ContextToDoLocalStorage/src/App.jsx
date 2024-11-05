@@ -4,17 +4,37 @@ import { TodoProvider } from './contexts'
 
 function App() {
   const [todos, setTodos] = useState([]) //todos in TodoContext its an array thats why default blank array
-
+  
   const addTodo = (todo) => {
-    setTodos((prev) => [...prev, {id:Date.now(), ...todo}])
+    setTodos((prev) => [...prev, {id:Date.now(), ...todo}])  // [...previos value, concat {id: unique, other values of todo}]
   }
 
+  
+  
   const updateTodo = (id, todo) => {
-    setTodos((prev) => prev.map((prevTodo) => (prevTodo.id === id ? todo : prevTodo)))
+    setTodos((prev) => prev.map(
+                                (prevTodo) => (prevTodo.id === id ? todo : prevTodo) // if true insert new todo else previous
+                              )
+            ) // also can use foreach
+          
+            // explanation 
+          //   prev.map((eachValue) => {
+          //     if (eachValue.id === id ){
+          //       todo
+          //   }else{
+          //     prevTodo
+          //   }
+          // }
   }
 
-  const deleteTodo = () => {
+  const deleteTodo = (id) => {
+    setTodos((prev) => prev.filter((todo) => todo.id !== id))  // create new array without selected id
+  }
 
+  const selectBtn = (id) => {
+     setTodos((prev) => prev.map(
+                                  (prevTodo) => prevTodo.id === id ? {...prevTodo, completed: !prevTodo.completed} 
+                                                                    : prevTodo))
   }
 
   return (
