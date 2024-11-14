@@ -1,9 +1,9 @@
 import './App.css'
-import config from './config/config';
+import {config} from './config/config';
 
 function App() {
   console.log(import.meta.env.VITE_APPWRITE_URL);
-  console.log(appwriteUrl);
+  console.log(config.appwriteUrl);
   
 
   return (
