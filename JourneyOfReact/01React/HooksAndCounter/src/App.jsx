@@ -1,5 +1,5 @@
-import './App.css'
-import {useState} from 'react';
+import { useState } from 'react';
+import './App.css';
 
 function App() {
   // let counter = 15;
@@ -26,6 +26,9 @@ function App() {
       
       <button onClick={addValue}>Add Value</button><br />
       <button onClick={removeValue}>Remove Value</button>
+{/* OR */}
+      <button type="button" onClick={() => setCounter((counter) => counter+2)}>Add Value</button>
+      <button onClick={() => setCounter((counter) => counter -1)}>remove</button>
     </>
   )
 }
