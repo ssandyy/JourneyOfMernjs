@@ -28,7 +28,7 @@ const UseStateHook = () => {
 
   return (
     <>
-        <div>UseStateHook Basics</div>
+        <div style={{color:'Green'}}><h1>UseStateHook Basics </h1></div>
 
         <input type="text" value={age} onChange={(e) => setAge(e.target.value)} />
         <button onClick={Counter}> Count on click</button>
