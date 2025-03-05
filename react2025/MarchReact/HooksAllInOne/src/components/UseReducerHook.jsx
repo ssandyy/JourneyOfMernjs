@@ -46,8 +46,8 @@ const UseReducerHook = () => {
       <hr />
       <h3>Multiple related states Management</h3>
       <form>
-        <input type="email" value={state.email} onChange={(e) => dispatch2({type:'Email', payload: e.target.value})} />
-        <input type="password" value={state.password} onChange={(e) => dispatch2({type:'Password', payload: e.target.value})} />
+        <input type="email" value={state.email} onChange={(e) => dispatch2({type:'Email', payload: e.target.value})}  placeholder='email'/>
+        <input type="password" value={state.password} onChange={(e) => dispatch2({type:'Password', payload: e.target.value})} placeholder='password' />
         <button type="submit">Submit</button>
       </form>
 
