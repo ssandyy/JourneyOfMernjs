@@ -17,7 +17,7 @@ const UseHooksDependentStatesGame = () => {
 
   return (
     <>
-        <div>useHooksDependentStatesGame</div>
+        <div><h2 style={{color:'green'}}> useHooksDependentStatesGame </h2></div>
 
         <p>Position: {state.position}, Score: {state.score}</p>
         <button onClick={() => dispatch({type:'move', distance:1})}>Move</button>
