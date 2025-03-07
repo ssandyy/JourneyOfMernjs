@@ -1,4 +1,4 @@
-const myName = new String("Mutu swami china swami aier");
+const myName = new String("  Mutu swami china swami aier  ");
 
 // prototypes:
 // charAt
