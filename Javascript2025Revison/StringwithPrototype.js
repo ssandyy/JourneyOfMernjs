@@ -1,24 +1,25 @@
 const myName = new String("  Mutu swami china swami aier  ");
-
-// prototypes:
-// charAt
-// charCodeAt
-// concat
-// includes
-// indexOf
-// lastIndexOf
-// match
-// repeat
-// replace
-// slice
-// split
-// startsWith
-// substring
-// toLowerCase
-// toUpperCase
-// trim
-// trimStart
-// trimEnd
+/*
+prototypes:
+charAt
+charCodeAt
+concat
+includes
+indexOf
+lastIndexOf
+match
+repeat
+replace
+slice
+split
+startsWith
+substring
+toLowerCase
+toUpperCase
+trim
+trimStart
+trimEnd
+*/
 
 Examples:
 // charAt(index): Returns the character at the specified index.
@@ -74,4 +75,3 @@ console.log(myName.trimStart()); // "Mutu swami china swami aier"
 
 // trimEnd(): Removes whitespace from the end of a string.
 console.log(myName.trimEnd()); // "Mutu swami china swami aier"
-
