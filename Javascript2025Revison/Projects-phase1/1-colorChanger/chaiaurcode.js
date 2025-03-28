@@ -13,11 +13,11 @@ const buttons = document.querySelectorAll('.button');
 
 const body = document.querySelector("body");
 buttons.forEach((btn) => {
-    console.log(btn);    
+    // console.log(btn);    
     btn.addEventListener('click', (event) => {
-        console.log(event);
-        console.log(event.target);
-        console.log(event.target.id); //yellow, blue...
+        // console.log(event);
+        // console.log(event.target);
+        // console.log(event.target.id); //yellow, blue...
 
         body.style.background = event.target.id // working fine
         
