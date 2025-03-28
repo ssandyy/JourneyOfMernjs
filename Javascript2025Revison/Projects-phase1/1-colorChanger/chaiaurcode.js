@@ -17,6 +17,9 @@ buttons.forEach((btn) => {
     btn.addEventListener('click', (event) => {
         console.log(event);
         console.log(event.target);
+        console.log(event.target.id); //yellow, blue...
+
+        body.style.background = event.target.id // working fine
         
         
     })
