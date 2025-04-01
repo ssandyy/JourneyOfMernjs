@@ -8,3 +8,21 @@ nums.forEach(num => {
 })
 
 console.log(count);
+
+
+
+
+console.log("===========================");
+
+const coding = ["hi", "hite", "sabd"];
+
+coding.forEach(function(ev){
+    console.log(ev);
+    
+})
+
+// hi
+// hite
+// sabd
+
+

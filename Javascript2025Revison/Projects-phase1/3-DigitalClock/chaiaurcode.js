@@ -4,4 +4,4 @@ const clock = document.querySelector('#clock');
 setInterval(function(){
     const timeNow = new Date();
     clock.innerHTML = timeNow.toLocaleTimeString();
-}, 1000);
+}, 1000); 
