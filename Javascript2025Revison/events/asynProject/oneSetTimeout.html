@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asyn Project 1</title>
+</head>
+<body>
+    <h1> Hello Asyn Project 1 </h1>
+    <!-- <button id="button" onclick="change()">Stop</button> -->
+    <button id="button" >Stop</button>
+</body>
+<script>
+    const change = () => {
+        document.querySelector('h1').innerHTML = "Good Morning..!"
+    }
+    // setTimeout(change, 2000) // Automatically change after 2 sec
+    const stopEvent = setTimeout(change, 3000);
+
+    document.querySelector('#button').addEventListener('click', function(){
+        clearTimeout(stopEvent)
+        console.log("Event stopped..!");
+        
+    })
+
+</script>
+</html>
