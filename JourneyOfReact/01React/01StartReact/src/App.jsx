@@ -5,6 +5,7 @@ function App() {
     <>
     <ComponentTest />
     <h1>Hello React through vite..!</h1>
+    <p>This is the begninng..</p>
     </>
     
   )
