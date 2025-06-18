@@ -1,5 +1,5 @@
-import React from 'react'
-import { useLoaderData } from 'react-router-dom'
+import React from 'react';
+import { useLoaderData } from 'react-router-dom';
 
 // Using "Loader" (will do same as user.jsx but more optimize way )
 const GitUser = () => {
@@ -7,7 +7,10 @@ const GitUser = () => {
 
   return (
     <>
-        <div>User Login: {userData.login}</div>
+        <div>User Name: {userData.name}</div> 
+        <div>User Login: {userData.avatar_url}</div> 
+        <div>User Login: {userData.location}</div> 
+        <div>User Created at: {userData.created_at}</div> 
     </>
   )
 }

@@ -1,13 +1,14 @@
 import { StrictMode } from 'react'
-import ReactDOM,{ createRoot } from 'react-dom/client'
-import App from './App.jsx'
-import './index.css'
-import {createBrowserRouter, createRoutesFromElements, Route, RouterProvider } from 'react-router-dom'
-import About from './components/About/About.jsx'
-import Home from './components/Home/Home.jsx'
-import Contact from './components/Contact/Contact.jsx'
-import User from './components/User/User.jsx'
+import ReactDOM from 'react-dom/client'
+import { createBrowserRouter, createRoutesFromElements, Route, RouterProvider } from 'react-router-dom'
 import GitUser, { gitUserInfo } from '../../../GitUser.jsx'
+import App from './App.jsx'
+import About from './components/About/About.jsx'
+import Contact from './components/Contact/Contact.jsx'
+import Home from './components/Home/Home.jsx'
+import Signin from './components/Sign/Signin.jsx'
+import User from './components/User/User.jsx'
+import './index.css'
 
 // 1st Way to triger routing
 // const router = createBrowserRouter([
@@ -42,6 +43,9 @@ const router = createBrowserRouter(
     <Route path='user' element={<User />} />
     <Route path='user/:userid' element={<User />} />  {/* // http://localhost:5173/user/sandeep */}
     <Route loader={gitUserInfo} path='gituser' element={<GitUser />} />
+    <Route path='signin' element={<Signin />} />
+    <Route loader={gitUserInfo} path='gituser' element={<GitUser />} />
+
 </Route>
   ));
 
@@ -50,5 +54,5 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     {/* <App /> */}
     <RouterProvider router={router}/>
 
-  </StrictMode>,
+  </StrictMode>
 )

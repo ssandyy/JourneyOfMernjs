@@ -48,4 +48,3 @@ createUser.prototype.printMe = () => {
 
 const incre = new createUser("this is print", 1000);
 incre.printMe() //Hi
-
