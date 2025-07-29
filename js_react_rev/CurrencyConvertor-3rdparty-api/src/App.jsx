@@ -1,5 +1,5 @@
 import './App.css';
-import InputBox from './components';
+import FormHandlingWithMultipleInput from './FormHandlingWithMultipleInput/FormHandlingWithMultipleInput';
 
 function App() {
 
@@ -43,8 +43,12 @@ function App() {
         //         </div>
         //     </div>
       
-
-      <InputBox />
+      <>
+      {/* <InputBox /> */}
+      {/* <DummyJsonApiFetch /> */}
+      <FormHandlingWithMultipleInput />
+      </>
+      
     );
 };
 
