@@ -2,7 +2,7 @@
 const page = () => {
   return (
     <div>
-        <h2>Welcome to Python Learning</h2>
+        <h2>This is Upcoming course..!</h2>
     </div>
   )
 }
